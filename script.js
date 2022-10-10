@@ -51,6 +51,9 @@ const determineWinner = (userChoice, computerChoice) => {
 
 const playGame = () => {
   const userChoice = getUserChoice("paper");
+  if(userChoice == undefined){
+    return;
+  }
   const computerChoice = getComputerChoice();
   console.log(`You chose ${userChoice}`);
   console.log(`Computer chose ${computerChoice}`);
